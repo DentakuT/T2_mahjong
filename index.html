@@ -15,24 +15,19 @@ border: 1px solid black;
 padding: 8px;
 text-align: left;
 }
-<script>
-  document.getElementById("showtoday").innerHTML = showtoday();
-  function showtoday() {
-    const now = new Date();
-    const month = now.getMonth() + 1;
-    const date = now.getDate();
-    const showtoday = month + "月" + date + "日";
-    return showtoday;
-  }
-</script>
 th {
 background-color: #f2f2f2;
 }
 </style>
+var today=new Date(); 
+var year = today.getFullYear();
+var month = today.getMonth()+1;
+var week = today.getDay();
+var day = today.getDate();
 </head>
 <body>
 <h1>ティーヌ宅麻雀順位表</h1>
-<h4>最終更新:<span id="showtoday"></span></h4>
+<h4>最終更新:month+"月"+day+"日"</h4>
 <table id="rankings">
 <tr>
 <th>順位</th>
